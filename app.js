@@ -12,14 +12,14 @@ function bitPadding(array, num){
     if(sizeArray % numBits != 0){
         toFill = numBits - (sizeArray % numBits);
     }
-    for(let l = 0 ; l < toFill; l++){ // Adjusted to remove the additional 8 bits
+    for(let l = 0 ; l < toFill; l++){ 
         array.unshift(0);
     }
     return array;
 }
 
 function bitNegation(array){
-    let sizeArray = array.length; // Added missing 'let' declaration
+    let sizeArray = array.length; 
     for(let i = 0 ; i < sizeArray ; i++){
         if( array[i] == 0){
             array[i] = 1;
@@ -30,8 +30,8 @@ function bitNegation(array){
 }
 
 function addOne(array){
-    let sizeArray = array.length; // Added missing 'let' declaration
-    for(let k = sizeArray-1 ; k >= 0 ; k--){ // Adjusted condition to include 0
+    let sizeArray = array.length; 
+    for(let k = sizeArray-1 ; k >= 0 ; k--){ 
         if( array[k] == 0){
             array[k] = 1;
             return array;
@@ -40,7 +40,8 @@ function addOne(array){
             array[k] = 0;
         }
     }
-    array.unshift(1); // Handles the case when all bits are 1
+    // Handles the edge-case when all bits are 1 so it is like to prevent "overflow"
+    array.unshift(1); 
     return array;
 }
 
@@ -75,7 +76,7 @@ function decimalToBinary() {
         document.getElementById('binaryResult').innerText = "Výsledek je: " + numericInput;
     }
     else{
-        let isNegative = numericInput < 0; // Adjusted to use boolean directly
+        let isNegative = numericInput < 0;
         if(isNegative){
             numericInput = Math.abs(numericInput);
         }
