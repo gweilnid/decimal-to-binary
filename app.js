@@ -45,6 +45,10 @@ function addOne(array){
     return array;
 }
 
+/*
+ * 3 Steps of Two's Complement:
+ * https://en.wikipedia.org/wiki/Two%27s_complement
+ */
 function twosComplement(num, array){
     array = bitPadding(array, num);
     array = bitNegation(array);
