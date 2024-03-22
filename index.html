@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                margin: 0;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1 st>Převod decimálních čísel do binární soustavy</h1>
+        <form id="myForm" style="padding: 20px">
+            <input type="text" id="decimalInput" name="decimalInput" 
+            style= "width: 300px; height: 40px; font-size: 20px; text-align: center;" placeholder= "Decimální číslo" >
+            <br>
+            <br>
+            <div style="text-align: center;">
+                <input type="button" style="width: 150px; height: 40px;" value="Převést" onclick="decimalToBinary()">
+            </div>
+        </form>
+        <p id="binaryResult" style="font-size: 25px; font-weight: bold;"></p>
+        <script src="app.js"></script>
+    </body>
+</html>
